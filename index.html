@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>MovieDate</title>
+
+    <!-- Manifest and Styles
+	  The manifest file lists all the information about the website in a JSON format und usually resides in the root folder of a web app -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- App Name -->
+    <meta name="MovieDate" content="Lab 04 PWA" />
+    <!-- On iOS, you can specify a web application title for the launch icon -->
+    <meta name="apple-mobile-web-app-title" content="Lab 04 PWA" />
+
+    <!-- Capability -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Hiding Safari User Interface Components in standalone mode-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Starting URL -->
+    <meta name="msapplication-starturl" content="/index.html" />
+
+    <!-- Theme/Display -->
+    <meta name="theme-color" content="white"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Icon for iOS 180x180 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="/js/use_webworker.js"></script>
+    <script src="/js/use_serviceworker.js"></script>
+    <script src="/js/main.js"></script>
+
+  </head>
+  <body>
+  <img src="img/icon_web.png">
+  <p class="rotate-hor-center">MovieDate</p>
+  </body>
+</html>
+<style>
+  *{
+    margin: 0;
+  }
+  body {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #4e1d67;
+  }
+  p{
+    font-size: 10vh;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Bahnschrift, serif;
+  }
+  .rotate-hor-center {
+    animation: rotate-hor-center 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  }
+  @keyframes rotate-hor-center {
+    0% {
+      transform: rotateX(0);
+    }
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }
+</style>
+<script>
+  window.onload = makeAnimation;
+  function makeAnimation(){
+    window.setTimeout(function(){
+      window.location.href = "html/home.html";
+    }, 2000);
+  }
+</script>
+
+</html>

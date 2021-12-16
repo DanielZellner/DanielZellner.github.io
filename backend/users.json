@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "daniel",
+      "firstname": "Daniel",
+      "lastname": "Zellner",
+      "birthdate": "5.5.2001",
+      "email": "daniel@test.at",
+      "password": "xyz"
+    },
+    {
+      "id": "2",
+      "username": "theresa",
+      "firstName": "Theresa",
+      "lastName": "Urbanek",
+      "birthdate": "20.4.1994",
+      "email": "theresa@test.at",
+      "password": "abc"
+    }
+ ]
+}
