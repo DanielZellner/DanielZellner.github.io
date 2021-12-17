@@ -30,7 +30,6 @@
     box-shadow: 10px 10px 10px 10px black;
     background-position: center center;
     background-size: cover;
-    background-image: url("../media/0001.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;

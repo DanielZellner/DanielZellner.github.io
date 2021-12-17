@@ -24,23 +24,21 @@ var filesToCache = [
  'img/android-icon-96x96.png',
  'img/android-icon-144x144.png',
  'img/android-icon-192x192.png',
+ 'img/apple-icon.png',
  'img/apple-icon-57x57.png',
  'img/apple-icon-60x60.png',
  'img/apple-icon-72x72.png',
- 'img/apple-icon-96x96.png',
- 'img/apple-icon-192x192.png',
- 'img/apple-icon.png',
- 'img/apple-icon-57x57.png',
  'img/apple-icon-76x76.png',
  'img/apple-icon-114x114.png',
  'img/apple-icon-120x120.png',
+ 'img/apple-icon-144x144.png',
  'img/apple-icon-152x152.png',
  'img/apple-icon-180x180.png',
  'img/apple-icon-precomposed.png',
  'img/favicon-16x16.png',
  'img/favicon-32x32.png',
  'img/favicon-96x96.png',
- 'img/home.png',
+ 'img/home.jpg',
  'img/icon_invertiert.png',
  'img/icon_web.png',
  'img/ms-icon-70x70.png',
@@ -61,9 +59,8 @@ var filesToCache = [
  'js/main.js',
  'js/profil.js',
  'js/swip.js',
- 'js/use_serviceworker.js',
- 'js/use_webworker.js',
- 'js/webworker.js',
+ 'index.html',
+ 'favicon.ico'
 ];
 
 // Install the service worker asynchronously, which then actually caches all the files contained in the above list
@@ -78,7 +75,7 @@ var filesToCache = [
 //					We open a cache with a given name, then add all the files our app uses to the cache, so they can be downloaded
 //          next time (identified by request URL).
 self.addEventListener("install", event => {
-  console.log("Service Worker MD PWA installing.");
+  console.log("Service Worker MD installing.");
   event.waitUntil(
       caches.open(cacheName).then(function(cache) {
         return cache.addAll(filesToCache);
@@ -86,10 +83,6 @@ self.addEventListener("install", event => {
   );
 });
 
-// This event is usually used to delete any files that are no longer necessary and clean up after the app in general.
-self.addEventListener("activate", event => {
-  console.log("Service Worker MD PWA activating.");
-});
 
 // The service worker fetches content from the cache if it is available there, providing offline functionality
 // @RespondWith:  It works as a virtual proxy server between the app and the network.
