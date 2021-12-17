@@ -23,7 +23,6 @@ var filesToCache = [
  'img/android-icon-72x72.png',
  'img/android-icon-96x96.png',
  'img/android-icon-144x144.png',
- 'img/android-icon-192x192.png',
  'img/apple-icon.png',
  'img/apple-icon-57x57.png',
  'img/apple-icon-60x60.png',
@@ -60,7 +59,8 @@ var filesToCache = [
  'js/profil.js',
  'js/swip.js',
  'index.html',
- 'favicon.ico'
+ 'favicon.ico',
+ 'manifest.json'
 ];
 
 // Install the service worker asynchronously, which then actually caches all the files contained in the above list
