@@ -58,7 +58,6 @@ var filesToCache = [
  'js/main.js',
  'js/profil.js',
  'js/swip.js',
- 'js/use_serviceworker.js',
  'index.html',
  'favicon.ico',
  'manifest.json',

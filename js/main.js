@@ -15,3 +15,15 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
 if (isIos() && !isInStandaloneMode()) {
     this.setState({ showInstallMessage: true });
 }
+if ("serviceWorker" in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker
+            .register("../serviceworker.js")
+            .then(serviceWorker => {
+                console.log("Service Worker MD PWA registered.");
+            })
+            .catch(error => {
+                console.error("Error registering the Service Worker MD PWA:", error);
+            });
+    });
+}
