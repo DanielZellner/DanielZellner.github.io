@@ -15,6 +15,7 @@ const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.n
 if (isIos() && !isInStandaloneMode()) {
     this.setState({ showInstallMessage: true });
 }
+//install
 if ("serviceWorker" in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker
