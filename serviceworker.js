@@ -58,9 +58,10 @@ var filesToCache = [
  'js/main.js',
  'js/profil.js',
  'js/swip.js',
+ 'js/use_serviceworker.js',
  'index.html',
  'favicon.ico',
- 'manifest.json'
+ 'manifest.json',
 ];
 
 // Install the service worker asynchronously, which then actually caches all the files contained in the above list
